@@ -658,6 +658,9 @@ flex-direction:column ;
   transform: translateX(0);
 }
   */
+
+
+  /*chat gpt
   @media(max-width:1360px){
     .hero-image{
       width: 350px;
@@ -686,4 +689,84 @@ flex-direction:column ;
     margin-left: 40px;
   }
 
+  }*/
+
+  @media (max-width: 768px) {
+  #hero {
+    flex-direction: column;
+    text-align: center;
+    margin-left: 0;
   }
+
+  #hero .left {
+    margin-top: 150px;
+  }
+
+  .hero-image {
+    margin: 30px auto;
+  }
+}
+
+@media (max-width: 500px) {
+  .form-box {
+    width: 90%;
+  }
+
+  .my-form {
+    width: 95%;
+  }
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -100%; /* Hide it initially */
+  width: 300px;
+  height: 100vh;
+  transition: right 0.3s ease;
+  background-color: var(--primary-color);
+  padding: 24px;
+  z-index: 3000;
+  flex-direction: column;
+}
+
+.sidebar.active {
+  right: 0;
+}
+
+/*@media (max-width: 950px) {
+  .project-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    gap: 30px;
+  }
+
+  .project-card {
+    width: 90%; 
+    max-width: 300px;
+  }
+}*/
+
+.project-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+  justify-items: center; /* Centers individual cards in each column */
+}
+
+@media (max-width: 900px) {
+  .project-list {
+    grid-template-columns: repeat(2, 1fr); /* Two cards per row */
+  }
+}
+@media (max-width: 550px) {
+  .project-list {
+    grid-template-columns: 1fr; /* One card per row */
+    justify-items: center; /* Center the single card */
+  }
+}
+.project-card {
+  width: 100%;
+  max-width: 280px;
+}
