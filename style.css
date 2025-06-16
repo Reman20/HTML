@@ -120,17 +120,18 @@ nav ul {
 nav img{
   container-name: po;
 }
-nav ul a{
+nav ul a {
   text-decoration: none;
   color: var(--color-white);
   background-color: var(--primary-color);
   font-size: 16px;
-  transition: background-color 0.3s ease, color 0.3s ease;
-
+  transition: transform 0.3s ease-in-out, text-decoration 0.3s ease-in-out;
+  display: inline-block; /* Needed for transform to work properly */
 }
 
-nav ul a:hover{
-  color:var(--color-black);
+nav ul a:hover {
+  text-decoration: underline;
+  transform: scale(1.2); /* Scales both X and Y evenly */
 }
 
 #hero {
