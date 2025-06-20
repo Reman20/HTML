@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
 
 :root {
-  --primary-color:#4f5255;
-  --secondary-color:rgb(204, 220, 215);
+  --primary-color:#44494d;
+  --secondary-color:rgba(0, 0, 0, 0.905);
   --color-black: #1e1e1e;
   --color-accent: rgba(38, 37, 37, 0.789);
   --color-white: #fafafa;
@@ -52,7 +52,39 @@ body {
 /* Typography end */
 
 /* Basic Styles Start */
-button,
+button {
+  background-color:var(--secondary-color); /* Default button color */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color:var(--color-accent); /* Darker on hover */
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
+/*a.download-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+a.download-btn:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+/*button,
 .btn {
   outline: none;
   border: none;
@@ -175,7 +207,7 @@ nav ul a:hover {
 
 }
 .hero-text h2 {
-  color: var(--primary-color);
+  color: var(--secondary-color);
   font-family: "Nunito Sans", sans-serif;
   animation: bounce 4s infinite ;
 }
@@ -255,12 +287,12 @@ p.sub-title {
 
 .project-card a {
   text-decoration: none;
-  font-size: 10px;
+
   background-color: var(--color-accent);
   width: fit-content;
-  padding: 3px;
   font-family: "Chivo", sans-serif;
-  border-radius: 2px;
+  border-radius: 0px;
+  padding: 2px;
   color: var(--color-white);
   
 }
@@ -765,6 +797,7 @@ flex-direction:column ;
     grid-template-columns: 1fr; /* One card per row */
     justify-items: center; /* Center the single card */
   }
+
 }
 .project-card {
   width: 100%;
